@@ -1,0 +1,68 @@
+{
+  "name": "@fingernails/osx",
+  "version": "1.0.0",
+  "description": "Custom cursors for macOS",
+  "keywords": [
+    "cursor",
+    "osx",
+    "os x",
+    "macOS",
+    "linux",
+    "win",
+    "windows",
+    "firefox",
+    "chrome",
+    "ie",
+    "edge"
+  ],
+  "homepage": "https://github.com/dekk-app/fingernails#readme",
+  "bugs": {
+    "url": "https://github.com/dekk-app/fingernails/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dekk-app/fingernails.git"
+  },
+  "license": "MIT",
+  "author": "Gregor Adams <greg@pixelass.com>",
+  "files": [
+    "dist",
+    "index.js",
+    "index.d.ts"
+  ],
+  "main": "index.js",
+  "module": "dist/esm/index.js",
+  "types": "index.d.ts",
+  "directories": {
+    "lib": "dist",
+    "doc": "doc",
+    "test": "test"
+  },
+  "scripts": {
+    "prebuild": "yarn clean",
+    "build": "ngineer --rollup --prod",
+    "clean": "ngineer clean",
+    "dev": "yarn watch",
+    "test": "ngineer test",
+    "watch": "ngineer --rollup --watch",
+    "prewatch": "yarn clean"
+  },
+  "dependencies": {
+    "ts-lib": "^0.0.5"
+  },
+  "devDependencies": {
+    "@ngineer/cli": "1.3.1",
+    "@ngineer/configs": "1.3.1",
+    "postcss-url": "8.0.0",
+    "rollup-plugin-postcss": "2.0.3",
+    "rollup-plugin-url": "2.2.2",
+    "ts-node": "8.4.1",
+    "typescript": "3.6.3"
+  },
+  "peerDependencies": {
+    "react": ">=16.9"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
